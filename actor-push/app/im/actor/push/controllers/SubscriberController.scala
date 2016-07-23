@@ -11,9 +11,9 @@ class SubscriberController extends Controller {
     def channelId = "actor.subs-" + java.util.UUID.randomUUID.toString
 
     val result: JsValue = Json.obj(
-      "endpoint" -> s"tcp://lab2.81port.com:1883/",
+      "endpoint" -> s"tcp://127.0.0.1:1883/",
       "topic" -> s"$channelId",
-      "push_endpoint" -> s"https://push.actor.im/push/"
+      "push_endpoint" -> s"https://push.actor.im.local/push/"
     )
 
     Ok(result)
